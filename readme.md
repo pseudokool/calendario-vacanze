@@ -10,6 +10,7 @@ Running it
 To Do
 ======
 * Add feature for custom holiday selection
+* Create Wordpress plugin
 
 Author
 ======

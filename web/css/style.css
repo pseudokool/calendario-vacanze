@@ -1,0 +1,144 @@
+
+#container{
+    margin:0px auto; 
+    text-align: center;
+    font-family:Helvetica, "Arial", Times, serif;
+    font-size: 3em;
+}
+.title-first{
+    color: #000;    
+}
+
+.title{
+    color: #888;
+}
+
+
+div#month-view{
+  /*margin:0px auto;*/
+  padding:0px;
+  float: left;
+  width: 330px;
+  height: 370px;
+  font-family:Helvetica, "Arial", Times, serif;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+ 
+div#month-view div.box{
+    position:relative;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:40px;
+    background-color:   #787878 ;      
+}
+ 
+div#month-view div.header{
+    line-height:40px;  
+    vertical-align:middle;
+    position:absolute;
+    left:11px;
+    top:0px;
+    width: 100%;
+    height:40px;   
+    text-align:center;
+}
+ 
+div#month-view div.header a.prev,div#month-view div.header a.next{ 
+    position:absolute;
+    top:0px;   
+    height: 17px;
+    display:block;
+    cursor:pointer;
+    text-decoration:none;
+    color:#FFF;
+}
+ 
+div#month-view div.header span.title{
+    color:#FFF;
+    font-size:18px;
+}
+ 
+ 
+div#month-view div.header a.prev{
+    left:0px;
+}
+ 
+div#month-view div.header a.next{
+    right:0px;
+}
+ 
+ 
+ 
+ 
+/* per day */
+div#month-view div.box-content{
+    border:1px solid #787878 ;
+    border-top:none;
+}
+ 
+ 
+ 
+div#month-view ul.label{
+    float:left;
+    margin: 0px;
+    padding: 0px;
+    margin-top:5px;
+    margin-left: 5px;
+}
+ 
+div#month-view ul.label li{
+    margin:0px;
+    padding:0px;
+    margin-right:5px;  
+    float:left;
+    list-style-type:none;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    vertical-align:middle;
+    text-align:center;
+    color:#000;
+    font-size: 15px;
+    background-color: transparent;
+}
+ 
+ 
+div#month-view ul.dates{
+    float:left;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+ 
+/** overall width = width+padding-right**/
+div#month-view ul.dates li{
+    margin:0px;
+    padding:0px;
+    margin-right:5px;
+    margin-top: 5px;
+    line-height:40px;
+    vertical-align:middle;
+    float:left;
+    list-style-type:none;
+    width:40px;
+    height:40px;
+    font-size:15px;
+    background-color: #DDD;
+    color:#000;
+    text-align:center; 
+}
+ 
+:focus{
+    outline:none;
+}
+ 
+div.clear{
+    clear:both;
+}     
+
+.hol-single{
+    background-color: #f00;
+}
