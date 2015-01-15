@@ -14,7 +14,8 @@ class Month {
         $this->naviHref = htmlentities($_SERVER['PHP_SELF']);
     }
      
-    private $dayLabels = array("Mon","Tue","Wed","Thu","Fri","Sat","Sun");
+    //private $dayLabels = array("Mon","Tue","Wed","Thu","Fri","Sat","Sun");
+    private $dayLabels = array("Fri","Sat","Sun","Mon","Tue","Wed","Thu");
     private $currentYear=0;
     private $currentMonth=0;
     private $currentDay=0;
@@ -88,12 +89,15 @@ class Month {
     * Generate days, using <li>
     */
     private function _showDay($cellNumber){
-         
+        //echo '<hr>';
+        //echo '<pre>';var_dump($this);echo '</pre>';//exit;
+
         if($this->currentDay==0){
              
             $firstDayOfTheWeek = date('N',strtotime($this->currentYear.'-'.$this->currentMonth.'-01'));
                      
-            if(intval($cellNumber) == intval($firstDayOfTheWeek)){
+            // +3 makes the week starts on a friday         
+            if(intval($cellNumber) == intval($firstDayOfTheWeek)+3){
                  
                 $this->currentDay=1;
                  
@@ -111,9 +115,14 @@ class Month {
             $this->currentDate =null;
             $cellContent=null;
         }
-             
-         
-        return '<li id="li-'.$this->currentDate.'" class="'.($cellNumber%7==1?' start ':($cellNumber%7==0?' end ':' ')).
+        //echo '<br>'.$this->currentDate;     
+        //echo date('l', strtotime($this->currentDate));
+
+        // color the weekend
+        $weekend_color = (  date('N', strtotime($this->currentDate))==6 ||
+                            date('N', strtotime($this->currentDate))==7  )?'day_hol':'day';     
+        
+        return '<li id="li-'.$this->currentDate.'" class="'.$weekend_color.' '.($cellNumber%7==1?' start ':($cellNumber%7==0?' end ':' ')).
                 ($cellContent==null?'mask':'').'">'.$cellContent.'</li>';
     }
      
