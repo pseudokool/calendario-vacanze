@@ -1,17 +1,20 @@
+<?php
+	ini_set('display_errors', 1);
+?>
 <html>
 <head>   
-<link href="css/style.css" type="text/css" rel="stylesheet" />
-<script src="js/jquery-1.11.2.min.js"></script>
-<script src="js/script.js" ></script>
+	<title>The Only Calendar You'll Ever Need</title>
+	<link href="css/style.css" type="text/css" rel="stylesheet" />
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/script.js" ></script>
 
 </head>
 <body>
 	<div id="container">
-		<div>
+		<div class="title-container">
 			<span class="title-first">T</span><span class="title">he</span> 
-			<span class="title-first">U</span><span class="title">ltimate</span> 
-			<span class="title-first">W</span><span class="title">eekend</span> 
-			<span class="title-first">C</span><span class="title">alendar</span>
+			<span class="title-first">O</span><span class="title">nly</span> 
+			<span class="title-first">C</span><span class="title">alendar ...</span>
 		</div>
 	<?php include 'class.calendar.php';
 
@@ -24,6 +27,10 @@
 
 
 	?>
+		<div class="clear"></div>
+		<div class="footer-container">
+			&copy;Feel Free To Share This
+		</div>
 	</div>	
 </body>
 </html> 
