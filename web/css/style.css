@@ -5,12 +5,36 @@
     font-family:Helvetica, "Arial", Times, serif;
     font-size: 3em;
 }
+.title-container{
+    margin-bottom: 5px;
+}
+
 .title-first{
     color: #000;    
 }
 
 .title{
     color: #888;
+}
+.footer-container{
+    font-size: 0.6em;
+    margin-bottom: 5px;
+}
+li{
+    cursor: pointer;
+}
+li:hover{
+    color: #fff;
+    opacity: 0.4;
+    background-color: #000;
+}
+.day_hol{
+    border-radius: 20px; 
+    color: #fff;
+    background-color: #000;
+}
+.day{
+    background-color: #cfcfcf;
 }
 
 
@@ -23,6 +47,7 @@ div#month-view{
   font-family:Helvetica, "Arial", Times, serif;
   margin-right: 10px;
   margin-bottom: 20px;
+  border-radius: 
 }
  
 div#month-view div.box{
@@ -32,6 +57,8 @@ div#month-view div.box{
     width:100%;
     height:40px;
     background-color:   #787878 ;      
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
  
 div#month-view div.header{
@@ -126,8 +153,6 @@ div#month-view ul.dates li{
     width:40px;
     height:40px;
     font-size:15px;
-    background-color: #DDD;
-    color:#000;
     text-align:center; 
 }
  
@@ -139,6 +164,3 @@ div.clear{
     clear:both;
 }     
 
-.hol-single{
-    background-color: #f00;
-}
