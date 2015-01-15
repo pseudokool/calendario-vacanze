@@ -14,16 +14,19 @@ $(document).ready(
 							console.log('No day')
 							return;	
 						}	
-						$(this).toggleClass('hol-single');
+						//$(this).toggleClass('day_hol');
 						
-						if( $(this).hasClass('hol-single') )
-							$(this).css('background-color','#888');
-						else
-							$(this).css('background-color','#DDD');
-
+						if( $(this).hasClass('day_hol') ){
+							$(this).removeClass('day_hol');
+							$(this).addClass('day');
+						}
+						else {
+							$(this).removeClass('day');
+							$(this).addClass('day_hol');
+						}
 
 						// update contiguous
-						UpdateContiguous();
+						//UpdateContiguous();
 					}
 
 				);
