@@ -21,15 +21,15 @@
 		for($aMonthCtr=1;$aMonthCtr<=12;$aMonthCtr++){
 			$aMonth = new Month();
 			echo $aMonth->show(2015, $aMonthCtr);
-			//echo '<div class="clear"></div><br/>';
-
+			
+			if($aMonthCtr==6) echo '<div class="clear"></div><br/>';
 		}
 
 
 	?>
 		<div class="clear"></div>
 		<div class="footer-container">
-			&copy;Feel Free To Share This
+			&copy; Feel Free To Share This
 		</div>
 	</div>	
 </body>
