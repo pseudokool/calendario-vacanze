@@ -14,7 +14,9 @@
 		<div class="title-container">
 			<span class="title-first">T</span><span class="title">he</span> 
 			<span class="title-first">O</span><span class="title">nly</span> 
+			<span class="title-first">2015</span><span class="title"></span> 
 			<span class="title-first">C</span><span class="title">alendar ...</span>
+			<span class="title"> <i>you'll ever need</i></span><span class="title"></span>
 		</div>
 	<?php include 'class.calendar.php';
 
@@ -29,7 +31,15 @@
 	?>
 		<div class="clear"></div>
 		<div class="footer-container">
-			&copy; Feel Free To Share This
+			<a href="#" class="social_links">
+				<img src="images/ico-tw.png" width="48" align="absmiddle" />
+			</a>
+			<a href="#" class="social_links">
+				<img src="images/ico-fb.png" width="48" align="absmiddle" />
+			</a>
+			<a href="#" class="social_links">
+				<img src="images/ico-g+.png" width="48" align="absmiddle" />
+			</a>
 		</div>
 	</div>	
 </body>
