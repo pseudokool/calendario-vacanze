@@ -31,12 +31,13 @@ li:hover{
     background-color: #000;
 }
 .day_hol{
-    border-radius: 10px; 
     color: #fff;
+    border-right: 5px solid #000;
     background-color: #000;
 }
 .day{
     background-color: #cfcfcf;
+    border-right: 5px solid #fff;
 }
 .social_links{
     text-decoration: none;
@@ -150,7 +151,7 @@ div#month-view ul.dates{
 div#month-view ul.dates li{
     margin:0px;
     padding:0px;
-    margin-right:5px;
+    /*margin-right:5px;*/
     margin-top: 5px;
     line-height:20px;
     vertical-align:middle;
