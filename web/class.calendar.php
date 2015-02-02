@@ -22,7 +22,32 @@ class Month {
     private $currentDate=null;
     private $daysInMonth=0;
     private $naviHref= null;
-     
+    
+    private $presetHolidays = array(
+                            '2015-01-01'=>'New Year\'s Day',
+                            '2015-01-26'=>'Republic Day',
+                            '2015-02-17'=>'',
+                            '2015-03-06'=>'',
+                            '2015-04-03'=>'',
+                            '2015-04-14'=>'',
+                            '2015-05-01'=>'',
+                            '2015-05-04'=>'',
+                            '2015-08-18'=>'',
+                            '2015-09-17'=>'',
+                            '2015-09-24'=>'',
+                            '2015-10-02'=>'',
+                            '2015-10-22'=>'',
+                            '2015-11-11'=>'',
+                            '2015-12-24'=>'',
+                            '2015-12-25'=>'',
+                        );
+
+    public function GetHolidays() {
+
+        return $this->presetHolidays;
+    }
+
+
     /**
     * display month-view
     * @year int Required Year
@@ -121,9 +146,14 @@ class Month {
         // color the weekend
         $weekend_color = (  date('N', strtotime($this->currentDate))==6 ||
                             date('N', strtotime($this->currentDate))==7  )?'day_hol':'day';     
-        
+        if( $cellContent==null ) $weekend_color = 'day_none';
+
+        // check for preset holidays
+        if( $this->currentDate!=null && array_key_exists($this->currentDate, $this->presetHolidays) )
+           $weekend_color = 'day_hol'; 
+
         return '<li id="li-'.$this->currentDate.'" class="'.$weekend_color.' '.($cellNumber%7==1?' start ':($cellNumber%7==0?' end ':' ')).
-                ($cellContent==null?'mask':'').'">'.$cellContent.'</li>';
+                ($cellContent==null?'mask':'').'" title="'.$this->presetHolidays[$this->currentDate].'">'.$cellContent.'</li>';
     }
      
     /**

@@ -1,17 +1,22 @@
-
+body{
+    -webkit-print-color-adjust: exact;    
+}
+@page {
+  size: landscape;
+}
 #container{
-    width: 90%;
+    width: 98%;
     margin:0px auto; 
     text-align: center;
     font-family:Helvetica, "Arial", Times, serif;
-    font-size: 3em;
+    font-size: 2em;
 }
 .title-container{
     margin-bottom: 15px;
 }
 
 .title-first{
-    color: #0277BD;    
+    color: #000;    
 }
 
 .title{
@@ -33,17 +38,12 @@
 }
 .day_hol{
     color: #fff;
-    border-right: 3px solid #009688;
-    border-left: 3px solid #009688;
-    background-color: #009688;
 }
 .day_none{
-    border-right: 3px solid #fff;
-    border-left: 3px solid #fff;
-    background-color: #fff; 
+    background-color: #fff;
+    
 }
 .day{
-    background-color: #E1F5FE;
     border-right: 3px solid #fff;
     border-left: 3px solid #fff;
 }
@@ -64,11 +64,11 @@ div#month-view{
   /*margin:0px auto;*/
   padding:0px;
   float: left;
-  width: 190px;
-  height: 190px;
+  width: 140px;
+  height: 150px;
   font-family:Helvetica, "Arial", Times, serif;
   margin-right: 10px;
-  margin-bottom: 125px;
+  margin-bottom: 25px;
 }
  
 div#month-view div.box{
@@ -76,7 +76,7 @@ div#month-view div.box{
     top:0px;
     left:0px;
     width:100%;
-    height:40px;
+    height:30px;
     background-color:   #03A9F4;      
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -89,7 +89,7 @@ div#month-view div.header{
     left:11px;
     top:0px;
     width: 100%;
-    height:40px;   
+    height:20px;   
     text-align:center;
 }
  
@@ -100,7 +100,7 @@ div#month-view div.header a.prev,div#month-view div.header a.next{
     display:block;
     cursor:pointer;
     text-decoration:none;
-    color:#FFF;
+    color:#000;
 }
  
 div#month-view div.header span.title{
@@ -124,7 +124,7 @@ div#month-view div.header a.next{
 div#month-view div.box-content{
     border:1px solid #03A9F4;
     border-top:none;
-    height: 180px;
+    height: 140px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -146,13 +146,13 @@ div#month-view ul.label li{
     margin-right:3px;  
     float:left;
     list-style-type:none;
-    width:20px;
-    height:20px;
-    line-height:20px;
+    width:12px;
+    height:10px;
+    line-height:10px;
     vertical-align:middle;
     text-align:center;
     color:#0277BD;
-    font-size: 10px;
+    font-size: 7px;
     background-color: transparent;
 }
  
@@ -170,13 +170,13 @@ div#month-view ul.dates li{
     margin:0px;
     padding:0px;
     /*margin-right:5px;*/
-    margin-top: 5px;
-    line-height:20px;
+    margin-top: 2px;
+    line-height:10px;
     vertical-align:middle;
     float:left;
     list-style-type:none;
-    width:20px;
-    height:20px;
+    width:10px;
+    height:10px;
     font-size:12px;
     text-align:center; 
 }
