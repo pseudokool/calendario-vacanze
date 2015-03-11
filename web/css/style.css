@@ -59,6 +59,14 @@
     font-family:Helvetica, "Arial", Times, serif;
     font-size: 1.5em;
 }
+.div_holiday_listing{
+    float: left;
+    border:1px solid #cfcfcf;
+}
+.tbl_holiday_listing{
+    margin-right: 100px;
+    float:left;
+}
 
 div#month-view{
   /*margin:0px auto;*/

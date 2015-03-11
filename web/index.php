@@ -15,7 +15,7 @@
 		<div class="title-container">
 			<span class="title-first">T</span><span class="title">he</span> 
 			<span class="title-first">O</span><span class="title">nly</span> 
-			<span class="title-first">2015</span><span class="title"></span> 
+			<span class="title-first"><?php echo date('Y', time()); ?></span><span class="title"></span> 
 			<span class="title-first">C</span><span class="title">alendar ...</span>
 			<span class="title"> <i>you'll ever need</i></span><span class="title"></span>
 		</div>
@@ -23,7 +23,7 @@
 
 		for($aMonthCtr=1;$aMonthCtr<=12;$aMonthCtr++){
 			$aMonth = new Month();
-			echo $aMonth->show(2015, $aMonthCtr);
+			echo $aMonth->show(date('Y', time()), $aMonthCtr);
 			
 			//if($aMonthCtr==6) echo '<div class="clear"></div><br/>';
 		}
@@ -49,23 +49,52 @@
 		<br/>
 
 		<h3>Holidays 2015</h3>
-		<div class="">
-			<table>
+		<div class="div_holiday_listing">
+			<table class="tbl_holiday_listing" cellpadding="5" cellspacing="5">
 				<?php
 					$singleMonth = new Month();
 					$alltheHolidays = $singleMonth->GetHolidays();
-					
+					$halfWay = count($alltheHolidays)/2;
+					$$halfWayCtr = 0;
 					foreach ($alltheHolidays as $date => $event) {
+						if($halfWayCtr>=$halfWay) continue;
 				?>		
 				<tr>
 					<td>
-						<?php echo $date; ?>
+						<?php echo date('j\<\s\u\p\>S\<\/\s\u\p\> F, Y', strtotime($date)); ?>
 					</td>
 					<td>
 						<strong><?php echo $event; ?></strong>
 					</td>
 				</tr>
 				<?php
+						$halfWayCtr++;
+					}
+				?>
+			</table>
+
+			<table class="tbl_holiday_listing" cellpadding="5" cellspacing="5">
+				<?php
+					$singleMonth = new Month();
+					$alltheHolidays = $singleMonth->GetHolidays();
+					$halfWay = count($alltheHolidays)/2;
+					$halfWayCtr = 0;
+					foreach ($alltheHolidays as $date => $event) {
+						if($halfWayCtr<$halfWay) {
+							$halfWayCtr++;
+							continue;
+						}		
+				?>		
+				<tr>
+					<td>
+						<?php echo date('j\<\s\u\p\>S\<\/\s\u\p\> F, Y', strtotime($date)); ?>
+					</td>
+					<td>
+						<strong><?php echo $event; ?></strong>
+					</td>
+				</tr>
+				<?php
+						
 					}
 				?>
 			</table>
