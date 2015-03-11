@@ -49,6 +49,7 @@
 		<br/>
 
 		<h3>Holidays 2015</h3>
+<<<<<<< HEAD
 		<div class="div_holiday_listing">
 			<table class="tbl_holiday_listing" cellpadding="5" cellspacing="5">
 				<?php
@@ -62,12 +63,26 @@
 				<tr>
 					<td>
 						<?php echo date('j\<\s\u\p\>S\<\/\s\u\p\> F, Y', strtotime($date)); ?>
+=======
+		<div class="">
+			<table>
+				<?php
+					$singleMonth = new Month();
+					$alltheHolidays = $singleMonth->GetHolidays();
+					
+					foreach ($alltheHolidays as $date => $event) {
+				?>		
+				<tr>
+					<td>
+						<?php echo $date; ?>
+>>>>>>> 83516e09589c16bf84d9c9771221f83f41d791fb
 					</td>
 					<td>
 						<strong><?php echo $event; ?></strong>
 					</td>
 				</tr>
 				<?php
+<<<<<<< HEAD
 						$halfWayCtr++;
 					}
 				?>
@@ -95,6 +110,8 @@
 				</tr>
 				<?php
 						
+=======
+>>>>>>> 83516e09589c16bf84d9c9771221f83f41d791fb
 					}
 				?>
 			</table>
