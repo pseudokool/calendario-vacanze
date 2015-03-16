@@ -8,9 +8,17 @@ body{
 #container-wrap{
     border: 1px solid #000;
 }
+.mastheader{
+    background-image: url("../images/header.black.jpg");
+    background-color: #fff;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
 #container{
+    padding-left: 50px;
+    padding-bottom: 100px;
     width: 98%;
-    padding-top: 100px;
     margin:0px auto; 
     text-align: center;
     font-family:Helvetica, "Arial", Times, serif;
@@ -58,7 +66,7 @@ body{
 }
 .copy{
     
-    padding-top: 300px;
+    margin-top: 650px;
     margin:0px auto; 
     padding-left: 100px;
     padding-right: 100px;
@@ -91,7 +99,7 @@ div#month-view div.box{
     left:0px;
     width:100%;
     height:30px;
-    background-color:   #03A9F4;      
+    background-color:   #000;      
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -119,7 +127,7 @@ div#month-view div.header a.prev,div#month-view div.header a.next{
  
 div#month-view div.header span.title{
     color:#FFF;
-    font-size:18px;
+    font-size:14px;
 }
  
  
@@ -136,7 +144,7 @@ div#month-view div.header a.next{
  
 /* per day */
 div#month-view div.box-content{
-    border:1px solid #03A9F4;
+    border:1px solid #000;
     border-top:none;
     height: 140px;
     border-bottom-left-radius: 5px;
@@ -166,7 +174,7 @@ div#month-view ul.label li{
     line-height:10px;
     vertical-align:middle;
     text-align:center;
-    color:#0277BD;
+    color:#000;
     font-size: 7px;
     background-color: transparent;
 }
@@ -190,7 +198,7 @@ div#month-view ul.dates li{
     vertical-align:middle;
     float:left;
     list-style-type:none;
-    width:10px;
+    width:12px;
     height:10px;
     font-size:12px;
     text-align:center; 

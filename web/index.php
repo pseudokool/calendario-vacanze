@@ -3,7 +3,7 @@
 ?>
 <html>
 <head>   
-	<title>The Only Calendar You'll Ever Need</title>
+	<title>The Weekend Rescuer 2015</title>
 	<link href="css/style.css" type="text/css" rel="stylesheet" />
 	<link rel="stylesheet" media="print" href="css/style.print.css" />
 	<script src="js/jquery-1.11.2.min.js"></script>
@@ -17,7 +17,8 @@
 	<div id="container-wrap">
 		
 		<center>
-			<img class="masthead" src="images/header.jpg" height="80px" />
+			<div class="mastheader"></div>
+			<!--img class="masthead" src="images/header.jpg" height="80px" /-->
 		</center>	
 
 		<div id="container">
@@ -70,7 +71,7 @@
 				?>		
 				<tr>
 					<td>
-						<?php echo $date; ?>
+						<?php echo date('j\<\s\u\p\>S\<\/\s\u\p\> F, Y', strtotime($date)); ?>
 					</td>
 					<td>
 						<strong><?php echo $event; ?></strong>
@@ -125,6 +126,13 @@
 	
 
 	</div>
+
+	<div class="footer">
+		<center>
+			&copy; The Weekend Rescuer, 2015
+		</center>
+	</div>	
+
 					
 </body>
 </html> 
