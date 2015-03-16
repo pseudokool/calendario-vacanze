@@ -169,7 +169,7 @@ class Month {
         return 
             '<div class="header">'.
                 '<!--a class="prev" href="'.$this->naviHref.'?month='.sprintf('%02d',$preMonth).'&year='.$preYear.'">Prev</a-->'.
-                    '<span class="title">'.date('F',strtotime($this->currentYear.'-'.$this->currentMonth.'-1')).'</span>'.
+                    '<span class="title">'.strtoupper(date('F \'y',strtotime($this->currentYear.'-'.$this->currentMonth.'-1'))).'</span>'.
                 '<!--a class="next" href="'.$this->naviHref.'?month='.sprintf("%02d", $nextMonth).'&year='.$nextYear.'">Next</a-->'.
             '</div>';
     }

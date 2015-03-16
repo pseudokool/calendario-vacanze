@@ -1,3 +1,10 @@
+body{
+    margin: 0px;
+}
+#container-wrap{
+    border: 1px solid #61c8ce;
+
+}
 
 #container{
     width: 90%;
@@ -5,6 +12,8 @@
     text-align: center;
     font-family:Helvetica, "Arial", Times, serif;
     font-size: 3em;
+    height:500px;
+    border: 0px solid #0f0;
 }
 .title-container{
     margin-bottom: 15px;
@@ -29,13 +38,13 @@
 #container li:hover{
     color: #fff;
     opacity: 0.4;
-    background-color: #009688;
+    background-color: #cfcfcf;
 }
 .day_hol{
-    color: #fff;
-    border-right: 3px solid #009688;
-    border-left: 3px solid #009688;
-    background-color: #009688;
+    color: #000;
+    border-right: 3px solid #cfcfcf;
+    border-left: 3px solid #cfcfcf;
+    background-color: #cfcfcf;
 }
 .day_none{
     border-right: 3px solid #fff;
@@ -43,7 +52,7 @@
     background-color: #fff; 
 }
 .day{
-    background-color: #E1F5FE;
+    background-color: #fff;
     border-right: 3px solid #fff;
     border-left: 3px solid #fff;
 }
@@ -52,12 +61,16 @@
 }
 .copy{
     
-    padding-top: 150px;
+    padding-top: 10px;
     margin:0px auto; 
     padding-left: 100px;
     padding-right: 100px;
     font-family:Helvetica, "Arial", Times, serif;
     font-size: 1.5em;
+
+    border: 0px solid #0ff;
+    background: #61c8ce;
+    color: #fff;
 }
 .div_holiday_listing{
     float: left;
@@ -76,7 +89,7 @@ div#month-view{
   height: 190px;
   font-family:Helvetica, "Arial", Times, serif;
   margin-right: 10px;
-  margin-bottom: 125px;
+  margin-bottom: 50px;
 }
  
 div#month-view div.box{
@@ -85,7 +98,7 @@ div#month-view div.box{
     left:0px;
     width:100%;
     height:40px;
-    background-color:   #03A9F4;      
+    background-color:   #000000;      
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -130,7 +143,7 @@ div#month-view div.header a.next{
  
 /* per day */
 div#month-view div.box-content{
-    border:1px solid #03A9F4;
+    border:1px solid #000;
     border-top:none;
     height: 180px;
     border-bottom-left-radius: 5px;
@@ -159,7 +172,7 @@ div#month-view ul.label li{
     line-height:20px;
     vertical-align:middle;
     text-align:center;
-    color:#0277BD;
+    color:#000;
     font-size: 10px;
     background-color: transparent;
 }

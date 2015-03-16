@@ -11,59 +11,57 @@
 
 </head>
 <body>
-	<div id="container">
-		<div class="title-container">
-			<span class="title-first">T</span><span class="title">he</span> 
-			<span class="title-first">O</span><span class="title">nly</span> 
-			<span class="title-first"><?php echo date('Y', time()); ?></span><span class="title"></span> 
-			<span class="title-first">C</span><span class="title">alendar ...</span>
-			<span class="title"> <i>you'll ever need</i></span><span class="title"></span>
-		</div>
-	<?php include 'class.calendar.php';
+		
 
-		for($aMonthCtr=1;$aMonthCtr<=12;$aMonthCtr++){
-			$aMonth = new Month();
-			echo $aMonth->show(date('Y', time()), $aMonthCtr);
-			
-			//if($aMonthCtr==6) echo '<div class="clear"></div><br/>';
-		}
+	<!-- container-wrap -->
+	<div id="container-wrap">
+		
+		<center>
+			<img class="masthead" src="images/header.jpg" height="80px" />
+		</center>	
+
+		<div id="container">
+			<div class="title-container">
+				
+				<!--span class="title-first">T</span><span class="title">he</span> 
+				<span class="title-first">O</span><span class="title">nly</span> 
+				<span class="title-first"><?php echo date('Y', time()); ?></span><span class="title"></span> 
+				<span class="title-first">C</span><span class="title">alendar ...</span>
+				<span class="title"> <i>you'll ever need</i></span><span class="title"></span-->
+			</div>
+			<?php include 'class.calendar.php';
+
+				for($aMonthCtr=3;$aMonthCtr<=12;$aMonthCtr++){
+					$aMonth = new Month();
+					echo $aMonth->show(date('Y', time()), $aMonthCtr);
+					
+					//if($aMonthCtr==6) echo '<div class="clear"></div><br/>';
+				}
+
+				for($aMonthCtr=1;$aMonthCtr<=2;$aMonthCtr++){
+					$aMonth = new Month();
+					echo $aMonth->show(date('2016'), $aMonthCtr);
+					
+					//if($aMonthCtr==6) echo '<div class="clear"></div><br/>';
+				}
 
 
-	?>
-	</div>	
-
+			?>
+		</div>	
+	</div> <!-- /container-wrap -->
+		
 	<div class="copy">
 		
-		<br/><br/>
 		<h3>How to use this calendar</h3>
-		<ol>
-			<li>Our lives has shrunk down to weekends. That's when we get time to pursue what we really would like to spend time on (assuming that your favorite pastime is not doing something that just makes money for you). Hence this calendar puts your time in the right perspective. Weekend should be how you start.</li>
-			<li>The calendar is made for you to customise :
-				<ol type="i">
-					<li>you can unselect any day that is not a holiday for you or is not important for you. Like Saturdays. If you don't have a 5-day week, unselect the Saturdays.</li>
-					<li>highlight and select any days</li> 
-				</ol>
-			</li>
-		</ol>	
+		<?php
+			include('how-to-use.php');
+		?>	
 
 		<br/>
 
 		<h3>Holidays 2015</h3>
 		<div class="div_holiday_listing">
 			<table class="tbl_holiday_listing" cellpadding="5" cellspacing="5">
-				<?php
-					$singleMonth = new Month();
-					$alltheHolidays = $singleMonth->GetHolidays();
-					$halfWay = count($alltheHolidays)/2;
-					$$halfWayCtr = 0;
-					foreach ($alltheHolidays as $date => $event) {
-						if($halfWayCtr>=$halfWay) continue;
-				?>		
-				<tr>
-					<td>
-						<?php echo date('j\<\s\u\p\>S\<\/\s\u\p\> F, Y', strtotime($date)); ?>
-		<div class="">
-			<table>
 				<?php
 					$singleMonth = new Month();
 					$alltheHolidays = $singleMonth->GetHolidays();
@@ -79,7 +77,7 @@
 					</td>
 				</tr>
 				<?php
-<<<<<<< HEAD
+
 						$halfWayCtr++;
 					}
 				?>
@@ -106,6 +104,7 @@
 					</td>
 				</tr>
 				<?php
+						
 					}
 				?>
 			</table>
