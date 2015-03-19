@@ -3,7 +3,7 @@
 ?>
 <html>
 <head>   
-	<title>The Weekend Rescuer 2015</title>
+	<title>The Long-Weekends Rescuer 2015</title>
 	<link href="css/style.css" type="text/css" rel="stylesheet" />
 	<link rel="stylesheet" media="print" href="css/style.print.css" />
 	<script src="js/jquery-1.11.2.min.js"></script>
@@ -49,8 +49,24 @@
 
 			?>
 		</div>	
-	</div> <!-- /container-wrap -->
+
+		<!-- quote -->
+		<div class="quote">
+			<!--span class="megaquote">"</span>
+				How did it get so late so soon? <br />
+				It's night before it's afternoon. <br/> 
+				December is here before it's June. <br />
+				My goodness how the time has flewn. <br />
+				How did it get so late so soon?
+			<span class="megaquote">"</span-->
+			<img src="images/text.png" class="quote-img" />	
+		</div> <!-- /quote -->	
 		
+
+	</div> <!-- /container-wrap -->
+	
+	
+
 	<div class="copy">
 		
 		<h3>How to use this calendar</h3>

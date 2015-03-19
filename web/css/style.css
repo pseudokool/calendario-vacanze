@@ -2,13 +2,17 @@ body{
     margin: 0px;
 }
 #container-wrap{
-    border: 1px solid #61c8ce;
-
+    border: 2px solid #61c8ce;
+    border-radius: 8px;
 }
 .mastheader{
-    background-image: url("../images/header.jpg");
+    /*text-align: center;
+    background-image: url("../images/header.png");
+    background-size: 900px;
+    background-repeat: no-repeat center;*/ 
+    background: url("../images/header.png") no-repeat center;
     background-color: #fff;
-    height: 92px;
+    height: 165px;
 }
 #container{
     width: 90%;
@@ -43,6 +47,9 @@ body{
     color: #fff;
     opacity: 0.4;
     background-color: #cfcfcf;
+}
+.day_wknd{
+    color: #ed1c24;
 }
 .day_hol{
     color: #000;
@@ -214,7 +221,19 @@ div#month-view ul.dates li{
 div.clear{
     clear:both;
 }     
-
+.quote{
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+.quote-img{
+    height: 120px;
+}
+.megaquote{
+    font-size: 70px;
+    vertical-align: text-bottom;
+}
 .footer{
     color: #61c8ce;
     font-size: 20px;

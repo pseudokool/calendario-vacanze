@@ -145,12 +145,13 @@ class Month {
 
         // color the weekend
         $weekend_color = (  date('N', strtotime($this->currentDate))==6 ||
-                            date('N', strtotime($this->currentDate))==7  )?'day_hol':'day';     
+                            date('N', strtotime($this->currentDate))==7  )?'day_wknd':'day_none';     
         if( $cellContent==null ) $weekend_color = 'day_none';
 
         // check for preset holidays
         if( $this->currentDate!=null && array_key_exists($this->currentDate, $this->presetHolidays) )
            $weekend_color = 'day_hol'; 
+
 
         return '<li id="li-'.$this->currentDate.'" class="'.$weekend_color.' '.($cellNumber%7==1?' start ':($cellNumber%7==0?' end ':' ')).
                 ($cellContent==null?'mask':'').'" title="'.$this->presetHolidays[$this->currentDate].'">'.$cellContent.'</li>';
